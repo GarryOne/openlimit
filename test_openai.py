@@ -8,7 +8,7 @@ from tenacity import retry, wait_random_exponential
 
 from openlimit.redis_rate_limiters import ChatRateLimiterWithRedis
 
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 TOTAL_TOKENS = 0
 TOTAL_REQUESTS = 0
